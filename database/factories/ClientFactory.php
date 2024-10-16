@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Position;
+use App\Models\Subdivision;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +19,9 @@ class ClientFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'full_name' => fake()->firstNameMale . fake()->lastName,
+            'position_id' => fake()->randomElement(Position::pluck('id')),
+            'subdivision_id' => fake()->randomElement(Subdivision::pluck('id')),
         ];
     }
 }
