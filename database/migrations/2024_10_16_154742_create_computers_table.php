@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('dimm_2')->nullable();
             $table->string('dimm_3')->nullable();
             $table->string('dimm_4')->nullable();
+            $table->string('videocard_1')->nullable();
+            $table->string('videocard_2')->nullable();
             $table->string('nomenclature')->nullable();
             $table->timestamps();
         });

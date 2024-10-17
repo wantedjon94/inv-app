@@ -28,6 +28,8 @@ class ComputerFactory extends Factory
             'dimm_2' => fake()->colorName,
             'dimm_3' => fake()->colorName,
             'dimm_4' => fake()->colorName,
+            'videocard_1' => fake()->streetName,
+            'videocard_2' => fake()->streetName,
             'nomenclature' => fake()->randomDigit(),
         ];
     }
