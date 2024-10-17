@@ -17,7 +17,8 @@ class SubdivisionFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'company' => "ГМЗ-2",
+            'name' => fake()->streetName,
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Brand;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,17 @@ class ComputerFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'name' => fake()->name,
+            'domain' => fake()->domainName,
+            'os' => fake()->safeColorName,
+            'motherboard' => fake()->colorName,
+            'brand_id' => fake()->randomElement(Brand::pluck('id')),
+            'cpu' => fake()->colorName,
+            'dimm_1' => fake()->colorName,
+            'dimm_2' => fake()->colorName,
+            'dimm_3' => fake()->colorName,
+            'dimm_4' => fake()->colorName,
+            'nomenclature' => fake()->randomDigit(),
         ];
     }
 }

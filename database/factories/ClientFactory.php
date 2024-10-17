@@ -22,6 +22,9 @@ class ClientFactory extends Factory
             'full_name' => fake()->firstNameMale . fake()->lastName,
             'position_id' => fake()->randomElement(Position::pluck('id')),
             'subdivision_id' => fake()->randomElement(Subdivision::pluck('id')),
+            'location' => fake()->streetName,
+            'cabinet' => fake()->numberBetween(100, 500),
+            'ip' => fake()->localIpv4,
         ];
     }
 }

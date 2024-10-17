@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('brand_id');
             $table->string('name');
             $table->string('nomenclature');
             $table->timestamps();
